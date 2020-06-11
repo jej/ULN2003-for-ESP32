@@ -1,9 +1,9 @@
-# ULN2003 for ESP32
+# ULN2003 for ESP8266/ESP32
 uln2003 for `MicroPython` has been in github, here's the [link](https://github.com/IDWizard/uln2003). But it's work for `microbit`, so I change a little to transplant for my NodeMCU's `ESP-32s`. Here's the example:
 ```python
 import Stepper
 from machine import Pin
-s1 = Stepper.create(Pin(16,Pin.OUT),Pin(17,Pin.OUT),Pin(5,Pin.OUT),Pin(18,Pin.OUT), delay=2)
+s1 = Stepper.create(Pin(16,Pin.OUT),Pin(17,Pin.OUT),Pin(5,Pin.OUT),Pin(18,Pin.OUT), freq=600)
 s1.step(100)
 s1.step(100,-1) # or s1.step(-100)
 s1.angle(180)
